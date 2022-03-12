@@ -1,9 +1,14 @@
 import React, { useState } from "react";
-import AddCategory from "./AddCategory";
-import GifGrid from "./GifGrid";
+import AddCategory from "./components/AddCategory";
+import GifGrid from "./components/GifGrid";
 
 const GifExpertApp = () => {
   const [categories, setCategories] = useState(["One Punch"]);
+  
+  //CAMBIO PARA EL TESTING
+  // const GifExpertApp = ({defaultCategories = []}) => {
+  // const [categories, setCategories] = useState(defaultCategories); 
+
   return (
     <>
       <h2>Gif Expert App</h2>
@@ -17,3 +22,6 @@ const GifExpertApp = () => {
   );
 };
 export default GifExpertApp;
+
+
+

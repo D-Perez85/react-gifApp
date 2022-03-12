@@ -6,17 +6,19 @@ const AddCategory = ({setCategories}) => {
  
   const handleChange = (e) => {
     setInput(e.target.value);
-   };
+    };
   
   const handleSubmit = (e) => {
     e.preventDefault(); 
-    if(input.trim().length > 2){
+       if(input.trim().length > 2){
         setCategories(categories => [input,...categories]); 
         setInput('')
     }
   };
   return (
     <form onSubmit={handleSubmit}>
+    {/* PARRAFO PARA PRUEBAS DE TESTING */}
+      <p>{input}</p> 
       <input 
         type="text" 
         value={input} 
